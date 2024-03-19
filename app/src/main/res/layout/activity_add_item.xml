@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white"
+    tools:context=".activity.AddItemActivity">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/cnv"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+            <ImageButton
+                android:id="@+id/btnBack"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="23dp"
+                android:layout_marginTop="18dp"
+                android:layout_weight="1"
+                android:background="@color/white"
+                android:src="@drawable/icon"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/textView9"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/add_item"
+                android:textSize="35sp"
+                android:textColor="@color/text_color"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/btnBack" />
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewItemName"
+                android:layout_width="390dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/textView9"
+                >
+
+                <EditText
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    android:background="@android:color/transparent"
+                    android:hint="@string/enter_food_name"
+                    android:inputType="textPersonName"
+                    android:textColor="@color/black"
+                    android:textSize="14sp" />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewItemPrice"
+                android:layout_width="390dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="@id/cardViewItemName"
+                app:layout_constraintStart_toStartOf="@id/cardViewItemName"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewItemName"
+                >
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:hint="@string/enter_food_price"
+                    android:textColor="@color/black"
+                    android:textSize="14sp"
+                    android:inputType="text"
+                    android:layout_gravity="center_vertical"
+                    android:layout_marginStart="10dp"
+                    />
+            </androidx.cardview.widget.CardView>
+
+            <androidx.cardview.widget.CardView
+                android:id="@+id/cardViewItemImage"
+                android:layout_width="390dp"
+                android:layout_height="57dp"
+                android:layout_marginTop="16dp"
+                app:cardCornerRadius="15dp"
+                app:layout_constraintEnd_toEndOf="@id/cardViewItemPrice"
+                app:layout_constraintStart_toStartOf="@id/cardViewItemPrice"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewItemPrice"
+                >
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TextView
+                        android:id="@+id/tvItemImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="10dp"
+                        android:text="@string/food_image"
+
+                        android:textSize="14sp"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+
+                        app:layout_constraintTop_toBottomOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+
+                    <TextView
+                        android:id="@+id/tvAddImage"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginEnd="16dp"
+                        android:drawableRight="@drawable/icon_plush_black"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintTop_toTopOf="parent" />
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+            </androidx.cardview.widget.CardView>
+
+            <ImageView
+                android:id="@+id/imageView4"
+                android:layout_width="175dp"
+                android:layout_height="117dp"
+                android:layout_marginTop="8dp"
+                android:src="@drawable/menu_photo1"
+                app:layout_constraintEnd_toEndOf="@id/cardViewItemImage"
+                app:layout_constraintStart_toStartOf="@id/cardViewItemImage"
+                app:layout_constraintTop_toBottomOf="@+id/cardViewItemImage" />
+
+            <TextView
+                android:id="@+id/textView10"
+                android:layout_width="390dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/short_description"
+                android:textSize="14sp"
+
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@id/imageView4"
+
+                app:layout_constraintStart_toStartOf="@id/imageView4"
+                app:layout_constraintTop_toBottomOf="@+id/imageView4" />
+
+            <EditText
+                android:id="@+id/textView11"
+                android:layout_width="300dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:hint="@string/lorem_ipsum_dolor_sit_amet_consectetur_adipiscing_elit_sed_do_eiusmod_tempor_incididunt_ut_labore_et_dolore_magna_aliqua_ut_enim_ad"
+                app:layout_constraintEnd_toEndOf="@+id/textView10"
+                app:layout_constraintHorizontal_bias="0.0"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="@+id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView10" />
+            <TextView
+                android:id="@+id/textView12"
+                android:layout_width="390dp"
+                android:layout_height="57dp"
+                android:layout_marginStart="16dp"
+                android:text="@string/ingredients"
+                android:textSize="14sp"
+
+                android:gravity="center_vertical"
+                android:layout_marginTop="16dp"
+                app:layout_constraintEnd_toEndOf="@id/textView10"
+                app:layout_constraintStart_toStartOf="@id/textView10"
+                app:layout_constraintTop_toBottomOf="@+id/textView11" />
+
+            <EditText
+                android:id="@+id/textView13"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:hint="@string/noddle_nsalad_nburger_nherbal_npan_ncakemomos"
+                app:layout_constraintEnd_toEndOf="@+id/textView12"
+                app:layout_constraintHorizontal_bias="0.0"
+               android:textSize="14sp"
+                android:background="@android:color/transparent"
+                app:layout_constraintStart_toStartOf="@+id/textView12"
+                app:layout_constraintTop_toBottomOf="@+id/textView12" />
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/buttonAddItem"
+                android:layout_width="157dp"
+                android:layout_height="57dp"
+                android:background="@drawable/red_button"
+                android:text="@string/add_item"
+                android:textColor="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/textView13"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                android:layout_marginBottom="16dp"
+                />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>
