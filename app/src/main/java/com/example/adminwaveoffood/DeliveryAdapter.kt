@@ -1,5 +1,6 @@
 package com.example.adminwaveoffood
 
+import android.annotation.SuppressLint
 import android.graphics.Color
 import android.view.LayoutInflater
 import android.view.ViewGroup
@@ -26,6 +27,7 @@ class DeliveryAdapter(private val customerName:MutableList<String>,private val p
 
     }
 
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): DeliveryAdapter.ViewHolder {
       val binding=DeliveryItemBinding.inflate(LayoutInflater.from(parent.context),parent,false)
         return ViewHolder(binding)
